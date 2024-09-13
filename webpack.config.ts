@@ -1,16 +1,13 @@
 import path from 'path';
 
-import HtmlWebpackPlugin from 'html-webpack-plugin';
 import { Configuration } from 'webpack';
+import {
+  WebpackEnv,
+  WebpackMode,
+  WebpackPaths
+} from './config/webpack/types/config';
 
-type WebpackMode = 'development' | 'production';
-type WebpackEnv = {
-  mode: WebpackMode;
-};
-type WebpackNamePaths = 'entry' | 'output' | 'html';
-type WebpackPaths = {
-  [key in WebpackNamePaths]: string;
-};
+import { buildWebpackConfig } from './config/webpack/buildWebpackConfig';
 
 export default (env: WebpackEnv) => {
   const mode: WebpackMode = env.mode || 'development';
@@ -21,43 +18,11 @@ export default (env: WebpackEnv) => {
     html: path.resolve(__dirname, 'public', 'index.html'),
   }
 
-  const config: Configuration = {
-    mode,
-    entry: paths.entry,
-    output: {
-      filename: isDev
-        ? '[name]_[contenthash:8].js'
-        : '[contenthash:8].js',
-      path: paths.output,
-      clean: true,
-    },
-    plugins: [new HtmlWebpackPlugin({
-      template: paths.html
-    })],
-    module: {
-      rules: [
-        {
-          test: /\.(js|ts|tsx)$/,
-          exclude: /node_modules/,
-          use: {
-            loader: "babel-loader",
-            options: {
-              presets: [
-                '@babel/preset-env',
-                '@babel/preset-typescript'
-              ]
-            }
-          }
-        },
-      ],
-    },
-    resolve: {
-      extensions: ['.tsx', '.ts', '.js'],
-    },
-    devtool: isDev
-      ? 'inline-source-map'
-      : undefined,
-  };
+  const config: Configuration = buildWebpackConfig({
+    isDev,
+    paths,
+    mode
+  });
 
   return config;
 };
