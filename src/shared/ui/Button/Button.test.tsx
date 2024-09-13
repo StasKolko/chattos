@@ -9,7 +9,8 @@ import {
   render,
   screen
 } from '@testing-library/react'
-import cls from './Button.module.css'
+import * as cls from './Button.module.css'
+import { cn } from "@/shared/lib/classNames";
 
 describe('Button', () => {
   it('should check the button in the document', () => {
@@ -49,13 +50,13 @@ describe('Button', () => {
       кнопка
     </Button>)
 
-    expect(screen
-      .getByTestId('button'))
-      .toHaveClass(
-        cls[buttonOptions],
-        cls[buttonVariants],
-        cls[buttonSizes]
-      );
+    const classes = screen.getByTestId('button').getAttribute('class');
+
+    const result = cn(cls[buttonOptions],
+      cls[buttonVariants],
+      cls[buttonSizes]);
+
+    expect(classes).toBe(result);
   })
 
   it('should check the button like a asChild', () => {

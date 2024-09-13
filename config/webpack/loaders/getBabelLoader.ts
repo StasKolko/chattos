@@ -1,6 +1,6 @@
 import { RuleSetRule } from "webpack";
 
-export function getBabelLoader(): RuleSetRule {
+export function getBabelLoader(isDev: boolean): RuleSetRule {
   return {
     test: /\.(js|ts|tsx)$/,
     exclude: /node_modules/,
@@ -20,7 +20,12 @@ export function getBabelLoader(): RuleSetRule {
               "runtime": "automatic"
             }
           ]
-        ]
+        ],
+        plugins: [
+          isDev
+            ? undefined
+            : "babel-plugin-jsx-remove-data-test-id"
+        ].filter(Boolean)
       }
     }
   }

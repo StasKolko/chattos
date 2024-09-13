@@ -9,9 +9,9 @@ import {
 } from 'react-router-dom';
 
 import { NotFoundPage } from '@/pages/NotFoundPage';
-import { Link } from 'react-router-dom';
 import { LangSwitcher } from '@/features/LangSwitcher';
 import { Suspense } from 'react';
+import { AppNav } from '@/features/AppNav';
 
 function ErrorBoundary() {
   let error = useRouteError();
@@ -28,9 +28,7 @@ const router = createBrowserRouter([
       <Suspense fallback={<div>Loading</div>}>
         <LangSwitcher size='md' variant='outline' />
       </Suspense>
-      <Link to={'/'}>Главная</Link>
-      <Link to={'/about'}>О нас</Link>
-      <Link to={'/notFoundPage'}>Куда-то в пустоту</Link>
+      <AppNav />
       <Outlet />
     </div>),
     errorElement: <ErrorBoundary />,
