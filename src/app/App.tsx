@@ -1,7 +1,9 @@
-export const App = () => {
+import './App.css'
+import { app } from './App.module.css';
 
+export const App = () => {
   return (
-    <div style={{ background: 'red', fontSize: '100px' }}>
+    <div className={app}>
       App1123
     </div>
   );

@@ -6,6 +6,8 @@ import { buildResolves } from "./buildResolves";
 import { buildLoaders } from "./buildLoaders";
 import { buildDevServer } from "./buildDevServer";
 
+import CssMinimizerPlugin from 'css-minimizer-webpack-plugin'
+
 export function buildWebpackConfig(options: WebpackOptions) {
   const { isDev, mode, paths, port } = options;
 
@@ -24,6 +26,13 @@ export function buildWebpackConfig(options: WebpackOptions) {
       rules: buildLoaders(isDev),
     },
     resolve: buildResolves(paths),
+    optimization: {
+      minimize: true,
+      minimizer: [
+        `...`,
+        new CssMinimizerPlugin()
+      ]
+    },
     devtool: isDev
       ? 'inline-source-map'
       : undefined,

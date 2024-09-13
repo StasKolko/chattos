@@ -1,28 +1,15 @@
 import { RuleSetRule } from "webpack";
 
+import { getBabelLoader } from "./loaders/getBabelLoader";
+import { getCssLoader } from "./loaders/getCssLoader";
+
 export function buildLoaders(isDev: boolean) {
-  const babelLoader = {
-    test: /\.(js|ts|tsx)$/,
-    exclude: /node_modules/,
-    use: {
-      loader: "babel-loader",
-      options: {
-        presets: [
-          '@babel/preset-env',
-          '@babel/preset-typescript',
-          [
-            "@babel/preset-react",
-            {
-              "runtime": "automatic"
-            }
-          ]
-        ]
-      }
-    }
-  }
+  const babelLoader = getBabelLoader();
+  const cssLoader = getCssLoader(isDev);
 
   const loaders: RuleSetRule[] = [
-    babelLoader
+    babelLoader,
+    cssLoader
   ]
 
   return loaders;
