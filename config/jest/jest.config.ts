@@ -7,15 +7,9 @@ import type { Config } from 'jest';
 
 const config: Config = {
   clearMocks: true,
+  testEnvironment: "jsdom",
   coveragePathIgnorePatterns: [
-    "<rootDir>/node_modules/"
-  ],
-  globals: {
-    __IS_DEV__: true
-  },
-  moduleDirectories: [
-    "node_modules",
-    "src"
+    '\\\\node_modules\\\\',
   ],
   moduleFileExtensions: [
     "js",
@@ -27,17 +21,19 @@ const config: Config = {
     "json",
     "node"
   ],
-  rootDir: '../../',
-  roots: [
-    "<rootDir>src"
+  moduleDirectories: [
+    "node_modules"
   ],
-  testEnvironment: "jsdom",
+  modulePaths: [
+    '<rootDir>src',
+  ],
   testMatch: [
-    "<rootDir>/src/**/*.(spec|test).[jt]s?(x)"
+    "<rootDir>src/**/*.(spec|test).[jt]s?(x)"
   ],
-  testPathIgnorePatterns: [
-    "<rootDir>/node_modules/"
-  ],
+  rootDir: '../../',
+  globals: {
+    __IS_DEV__: true
+  },
 };
 
 export default config;
