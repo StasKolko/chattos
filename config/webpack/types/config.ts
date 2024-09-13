@@ -4,7 +4,7 @@ export type WebpackEnv = {
   mode: WebpackMode;
 };
 
-export type WebpackNamePaths = 'entry' | 'output' | 'html';
+export type WebpackNamePaths = 'entry' | 'output' | 'html' | 'src';
 
 export type WebpackPaths = {
   [key in WebpackNamePaths]: string;
