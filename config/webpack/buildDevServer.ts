@@ -6,7 +6,8 @@ export function buildDevServer(port: number) {
   const config: DevServerConfiguration = {
     port,
     open: true,
-    hot: true
+    hot: true,
+    historyApiFallback: true,
   }
 
   return config;

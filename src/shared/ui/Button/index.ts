@@ -1,4 +1,4 @@
-export { Button } from './ui/Button';
+export { Button } from './Button';
 export {
   ButtonOptions,
   ButtonProps,
@@ -6,4 +6,4 @@ export {
   ButtonTypes,
   ButtonVariantsBtnAndIcon,
   ButtonVariantsLink
-} from './ui/types';
+} from './types';

@@ -1,1 +1,1 @@
-export { classNames as cn } from './core/classNames'
+export { classNames as cn } from './classNames'

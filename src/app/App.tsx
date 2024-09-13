@@ -1,10 +1,41 @@
-import './App.css'
-import { app } from './App.module.css';
+import {
+  createBrowserRouter,
+  Outlet,
+  RouterProvider
+} from 'react-router-dom';
+
+import { NotFoundPage } from '@/pages/NotFoundPage';
+import { Link } from 'react-router-dom';
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <div>
+      Hello world!
+      <Link to={'/'}>Главная</Link>
+      <Link to={'/about'}>О нас</Link>
+      <Link to={'/notFoundPage'}>Куда-то в пустоту</Link>
+      <Outlet />
+    </div>,
+    children: [
+      {
+        index: true,
+        element: <div>Main page</div>,
+      },
+      {
+        path: '/about',
+        element: <div>Main page</div>,
+      },
+      {
+        path: "/*",
+        element: <NotFoundPage />,
+      }
+    ]
+  },
+]);
 
 export const App = () => {
   return (
-    <div className={app}>
-      App1123
-    </div>
+    <RouterProvider router={router} />
   );
 };
