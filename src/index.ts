@@ -1,4 +1,4 @@
 import { App } from "@/app/App";
 
 const root = document.getElementById('root');
-root.appendChild(App(1));
+root.appendChild(App(3));

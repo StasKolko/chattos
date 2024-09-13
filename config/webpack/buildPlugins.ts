@@ -1,4 +1,5 @@
 import {
+  HotModuleReplacementPlugin,
   ProgressPlugin,
   WebpackPluginInstance
 } from "webpack";
@@ -17,7 +18,8 @@ export function buildPlugins(options: WebpackOptions) {
 
   if (isDev) {
     plugins.push(
-      new ProgressPlugin()
+      new ProgressPlugin(),
+      new HotModuleReplacementPlugin()
     )
   }
 

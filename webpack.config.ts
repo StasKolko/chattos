@@ -10,6 +10,7 @@ import {
 import { buildWebpackConfig } from './config/webpack/buildWebpackConfig';
 
 export default (env: WebpackEnv) => {
+  const port = env.port || 3000;
   const mode: WebpackMode = env.mode || 'development';
   const isDev = mode === 'development';
   const paths: WebpackPaths = {
@@ -22,7 +23,8 @@ export default (env: WebpackEnv) => {
   const config: Configuration = buildWebpackConfig({
     isDev,
     paths,
-    mode
+    mode,
+    port
   });
 
   return config;
