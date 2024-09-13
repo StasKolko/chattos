@@ -1,9 +1,9 @@
 export { Button } from './Button';
 export {
-  ButtonOptions,
-  ButtonProps,
-  ButtonSizes,
-  ButtonTypes,
-  ButtonVariantsBtnAndIcon,
-  ButtonVariantsLink
+  type ButtonOptions,
+  type ButtonProps,
+  type ButtonSizes,
+  type ButtonTypes,
+  type ButtonVariantsBtnAndIcon,
+  type ButtonVariantsLink
 } from './types';

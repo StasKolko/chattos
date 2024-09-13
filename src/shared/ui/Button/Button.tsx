@@ -10,7 +10,7 @@ import {
   ButtonProps
 } from './types';
 import { cn } from '@/shared/lib/classNames';
-import cls from './Button.module.css';
+import * as cls from './Button.module.css';
 
 export function Button<T extends ButtonOptions>({
   asChild,
