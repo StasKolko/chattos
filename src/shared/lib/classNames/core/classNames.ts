@@ -1,4 +1,6 @@
-type Argument = string | Record<string, string | boolean> | string[];
+type Mapping = Record<string, string | boolean | undefined>
+
+type Argument = undefined | string | Mapping | string[];
 
 export function classNames(...args: Argument[]): string {
   let classes = '';

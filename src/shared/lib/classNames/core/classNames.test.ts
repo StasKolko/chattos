@@ -3,7 +3,7 @@ import { classNames as cn } from "./classNames"
 describe('classNames', () => {
   it.each([
     { classes: [], result: '' },
-    { classes: [{ red: '', blue: false }, '', ' ', ['', ' ']], result: '' },
+    { classes: [{ red: '', blue: false, yellow: undefined }, '', ' ', ['', ' ']], result: '' },
   ])('should return empty string', ({ classes, result }) => {
     const expected = cn(...classes);
 

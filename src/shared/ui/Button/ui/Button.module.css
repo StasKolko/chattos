@@ -1,0 +1,302 @@
+.btn, .icon, .link {
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: var(--radius);
+  background-color: var(--background);
+  color: var(--foreground);
+  padding: 0;
+  font: var(--text-sm);
+  font-weight: 500;
+  text-decoration: none;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.btn:focus-visible,
+.icon:focus-visible,
+.link:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+.icon svg {
+  width: 60%;
+  height: 60%;
+}
+
+.btn:disabled,
+.link:disabled,
+.icon:disabled,
+.disabled {
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.btn.xs {
+  height: 2rem;
+  padding: 0 0.5rem;
+}
+
+.btn.sm {
+  height: 2.25rem;
+  padding: 0 0.75rem;
+}
+
+.btn.md {
+  height: 2.5rem;
+  padding: 0 1rem;
+}
+
+.btn.lg {
+  height: 2.75rem;
+  padding: 0 1.75rem;
+}
+
+.link.xs {
+  height: 1.5rem;
+  padding: 0 0.25rem;
+}
+
+.link.sm {
+  height: 1.75rem;
+  padding: 0 0.5rem;
+}
+
+.link.md {
+  height: 2rem;
+  padding: 0 0.75rem;
+}
+
+.link.lg {
+  height: 2.25rem;
+  padding: 0 1rem;
+}
+
+.icon.xs {
+  height: 2rem;
+  width: 2rem;
+}
+
+.icon.sm {
+  height: 2.25rem;
+  width: 2.25rem;
+}
+
+.icon.md {
+  height: 2.5rem;
+  width: 2.5rem;
+}
+
+.icon.lg {
+  height: 2.75rem;
+  width: 2.75rem;
+}
+
+.btn.primary,
+.icon.primary {
+  background-color: var(--primary);
+  color: var(--primary-foreground);
+  border: 1px solid var(--primary);
+  transition: background-color 250ms, color 250ms;
+}
+
+.btn.secondary,
+.icon.secondary {
+  background-color: var(--secondary);
+  color: var(--secondary-foreground);
+  border: 1px solid var(--secondary);
+  transition: border 250ms, color 250ms;
+}
+
+.btn.outline,
+.icon.outline {
+  border: 1px solid var(--input);
+  transition: border 250ms, color 250ms;
+}
+
+.btn.ghost,
+.icon.ghost {
+  transition: background-color 250ms, color 250ms;
+}
+
+.btn.destructive,
+.icon.destructive {
+  background-color: var(--destructive);
+  color: var(--destructive-foreground);
+  border: 1px solid var(--destructive-foreground);
+  transition: background-color 250ms, color 250ms;
+}
+
+.btn.successful,
+.icon.successful {
+  background-color: var(--successful);
+  color: var(--successful-foreground);
+  border: 1px solid var(--successful-foreground);
+  transition: background-color 250ms, color 250ms;
+}
+
+.link.primary {
+  color: var(--primary);
+  font-weight: 700;
+  transition: color 250ms;
+}
+
+:global(.yellow.light) .link.primary {
+  color: var(--foreground);
+  transition: opacity 250ms;
+}
+
+:global(.yellow.light) .link.secondary {
+  opacity: 0.6;
+}
+
+:global(.zinc) .link.primary {
+  transition: opacity 250ms;
+}
+
+:global(.dark.violet) .link.primary {
+  color: hsl(263.4deg 100% 60%);
+}
+
+.link.secondary {
+  opacity: 0.6;
+  color: var(--foreground);
+  font-weight: 700;
+  transition: opacity 250ms;
+}
+
+.link.underline {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
+  opacity: 1;
+  transition: text-underline-offset 250ms;
+}
+
+:global(.zinc) .link.secondary.underline {
+  opacity: 0.6;
+}
+
+@media (hover: hover) {
+  .btn.primary:hover,
+  .icon.primary:hover {
+    background-color: var(--secondary);
+    color: var(--primary);
+  }
+
+  :global(.light.yellow) .btn.primary:hover,
+  :global(.light.yellow) .icon.primary:hover,
+  :global(.light.yellow) .btn.secondary:hover,
+  :global(.light.yellow) .icon.secondary:hover,
+  :global(.light.yellow) .btn.outline:hover,
+  :global(.light.yellow) .icon.outline:hover {
+    color: var(--primary-foreground);
+    border-color: var(--primary-foreground);
+  }
+
+  :global(.dark.violet) .btn.primary:hover,
+  :global(.dark.violet) .icon.primary:hover,
+  :global(.dark.violet) .btn.secondary:hover,
+  :global(.dark.violet) .icon.secondary:hover,
+  :global(.dark.violet) .btn.outline:hover,
+  :global(.dark.violet) .icon.outline:hover {
+    color: var(--primary-foreground);
+    border-color: var(--primary-foreground);
+  }
+
+  .btn.secondary:hover,
+  .icon.secondary:hover,
+  .btn.outline:hover,
+  .icon.outline:hover {
+    border-color: var(--primary);
+    color: var(--primary);
+  }
+
+  .btn.ghost:hover,
+  .icon.ghost:hover {
+    background-color: var(--secondary);
+    color: var(--secondary-foreground);
+  }
+
+  .btn.destructive:hover,
+  .icon.destructive:hover {
+    background-color: var(--destructive-foreground);
+    color: var(--destructive);
+    border-color: var(--destructive);
+  }
+
+  .btn.successful:hover,
+  .icon.successful:hover {
+    background-color: var(--successful-foreground);
+    color: var(--successful);
+    border-color: var(--successful);
+  }
+
+  .link.primary:hover {
+    color: var(--foreground);
+  }
+
+  :global(.light.yellow) .link.primary:hover {
+    color: var(--foreground);
+    opacity: 0.5;
+  }
+
+  :global(.light.yellow) .link.secondary.underline:hover {
+    opacity: 1;
+  }
+
+  :global(.light.yellow) .link.secondary:hover {
+    opacity: 1;
+  }
+
+  :global(.zinc) .link.primary:hover {
+    opacity: 0.5;
+  }
+
+  :global(.dark.violet) .link.primary:hover {
+    color: var(--foreground);
+  }
+
+  .link.secondary:hover {
+    opacity: 1;
+  }
+
+  .link.underline:hover {
+    text-underline-offset: 8px;
+  }
+
+  .link.primary.underline:hover {
+    color: var(--primary)
+  }
+
+  :global(.zinc) .link.primary.underline:hover {
+    opacity: 1;
+    transition: text-underline-offset 250ms;
+  }
+
+  :global(.zinc) .link.secondary.underline:hover {
+    opacity: 1;
+  }
+}
+
+.btn.primary:active,
+.icon.primary:active,
+.btn.secondary:active,
+.icon.secondary:active,
+.btn.outline:active,
+.icon.outline:active,
+.btn.ghost:active,
+.icon.ghost:active,
+.btn.destructive:active,
+.icon.destructive:active,
+.btn.successful:active,
+.icon.successful:active,
+.link.primary:active,
+.link.secondary:active {
+  transition: none;
+  background-color: var(--active);
+}
+
