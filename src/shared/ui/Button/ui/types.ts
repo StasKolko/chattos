@@ -24,4 +24,5 @@ export interface ButtonProps<T extends ButtonOptions> extends ButtonHTMLAttribut
   children?: React.ReactNode;
   disabled?: boolean;
   underline?: T extends 'link' ? boolean : undefined;
+  dataTestId?: string;
 }

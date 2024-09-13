@@ -21,9 +21,7 @@ const config: Config = {
     "json",
     "node"
   ],
-  moduleDirectories: [
-    "node_modules"
-  ],
+  moduleDirectories: ['node_modules', '<rootDir>src'],
   modulePaths: [
     '<rootDir>src',
   ],
@@ -31,6 +29,11 @@ const config: Config = {
     "<rootDir>src/**/*.(spec|test).[jt]s?(x)"
   ],
   rootDir: '../../',
+  setupFilesAfterEnv: ['<rootDir>config/jest/jest-setup.js'],
+  moduleNameMapper: {
+    "^@/(.*)$": "<rootDir>/src/$1",
+    '\\.css$': 'identity-obj-proxy',
+  },
   globals: {
     __IS_DEV__: true
   },

@@ -22,6 +22,7 @@ export function Button<T extends ButtonOptions>({
   children,
   disabled = false,
   underline = undefined,
+  dataTestId = 'button',
   ...rest
 }: ButtonProps<T>) {
   const buttonProps = {
@@ -35,6 +36,7 @@ export function Button<T extends ButtonOptions>({
       },
       className
     ),
+    'data-testid': dataTestId,
     ...rest
   };
 
