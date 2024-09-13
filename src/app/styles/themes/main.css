@@ -1,0 +1,19 @@
+.light {
+  --background: hsl(0deg 0% 100%);
+  --foreground: hsl(222deg 100% 4%);
+  --overlay: rgb(0 0 0 / 40%);
+  --destructive: hsl(0deg 99% 94%);
+  --destructive-foreground: hsl(0deg 99% 25%);
+  --successful: hsl(145deg 99% 94%);
+  --successful-foreground: hsl(145deg 99% 25%);
+}
+
+.dark {
+  --background: hsl(240deg 10% 3.9%);
+  --foreground: hsl(0deg 0% 98%);
+  --overlay: rgb(0 0 0 / 60%);
+  --destructive: hsl(0deg 60% 16%);
+  --destructive-foreground: hsl(0deg 99% 82%);
+  --successful: hsl(145deg 60% 16%);
+  --successful-foreground: hsl(145deg 99% 82%);
+}

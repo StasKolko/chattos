@@ -1,0 +1,25 @@
+.light.red {
+  --card: hsl(0deg 0% 100%);
+  --card-foreground: hsl(0deg 0% 3.9%);
+  --active: hsl(0deg 83.2% 73.3%);
+  --primary: hsl(0deg 72.2% 50.6%);
+  --primary-foreground: hsl(0deg 85.7% 97.3%);
+  --secondary: hsl(0deg 0% 90.1%);
+  --secondary-foreground: hsl(0deg 0% 9%);
+  --border: hsl(0deg 0% 88%);
+  --input: hsl(0deg 0% 82%);
+  --ring: hsl(0deg 72.2% 50.6%);
+}
+
+.dark.red {
+  --card: hsl(0deg 0% 3.9%);
+  --card-foreground: hsl(0deg 0% 98%);
+  --active: hsl(0deg 91.2% 20%);
+  --primary: hsl(0deg 72.2% 50.6%);
+  --primary-foreground: hsl(0deg 85.7% 97.3%);
+  --secondary: hsl(0deg 0% 14.9%);
+  --secondary-foreground: hsl(0deg 0% 98%);
+  --border: hsl(0deg 0% 14.9%);
+  --input: hsl(0deg 0% 14.9%);
+  --ring: hsl(0deg 72.2% 50.6%);
+}

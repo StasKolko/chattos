@@ -1,0 +1,25 @@
+.light.zinc {
+  --card: hsl(0deg 0% 100%);
+  --card-foreground: hsl(240deg 10% 3.9%);
+  --active: hsl(240deg 6% 73.3%);
+  --primary: hsl(240deg 5.9% 10%);
+  --primary-foreground: hsl(0deg 0% 98%);
+  --secondary: hsl(240deg 4.8% 90%);
+  --secondary-foreground: hsl(240deg 5.9% 10%);
+  --border: hsl(240deg 5.9% 88%);
+  --input: hsl(240deg 5.9% 82%);
+  --ring: hsl(240deg 5.9% 10%);
+}
+
+.dark.zinc {
+  --card: hsl(240deg 10% 3.9%);
+  --card-foreground: hsl(0deg 0% 98%);
+  --active: hsl(0deg 0% 29.8%);
+  --primary: hsl(0deg 0% 98%);
+  --primary-foreground: hsl(240deg 5.9% 10%);
+  --secondary: hsl(240deg 3.7% 15.9%);
+  --secondary-foreground: hsl(0deg 0% 98%);
+  --border: hsl(240deg 3.7% 15.9%);
+  --input: hsl(240deg 3.7% 15.9%);
+  --ring: hsl(240deg 4.9% 83.9%);
+}

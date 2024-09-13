@@ -1,0 +1,31 @@
+@import url('./variables/font.css');
+@import url('./variables/global.css');
+@import url('./themes/main');
+@import url('./themes/blue');
+@import url('./themes/yellow');
+@import url('./themes/zinc');
+@import url('./themes/red');
+@import url('./themes/rose');
+@import url('./themes/orange');
+@import url('./themes/green');
+@import url('./themes/violet');
+@import url('./utilities/font.css');
+
+body {
+  margin: 0;
+  padding-bottom: calc(var(--header-height) + 1px);
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family:
+    var(--font-family-main);
+}
+
+@media (width >= 768px) {
+  body{
+    padding-bottom: 0;
+  }
+}
+
+#root {
+  min-height: 100vh;
+}

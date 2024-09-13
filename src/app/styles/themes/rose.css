@@ -1,0 +1,25 @@
+.light.rose {
+  --card: hsl(0deg 0% 100%);
+  --card-foreground: hsl(240deg 10% 3.9%);
+  --active: hsl(346.8deg 83.2% 78.3%);
+  --primary: hsl(346.8deg 77.2% 49.8%);
+  --primary-foreground: hsl(355.7deg 100% 97.3%);
+  --secondary: hsl(240deg 4.8% 90%);
+  --secondary-foreground: hsl(240deg 5.9% 10%);
+  --border: hsl(240deg 5.9% 88%);
+  --input: hsl(240deg 5.9% 82%);
+  --ring: hsl(346.8deg 77.2% 49.8%);
+}
+
+.dark.rose {
+  --card: hsl(24deg 9.8% 10%);
+  --card-foreground: hsl(0deg 0% 95%);
+  --active: hsl(346.8deg 91.2% 20%);
+  --primary: hsl(346.8deg 77.2% 49.8%);
+  --primary-foreground: hsl(355.7deg 100% 97.3%);
+  --secondary: hsl(240deg 3.7% 15.9%);
+  --secondary-foreground: hsl(0deg 0% 98%);
+  --border: hsl(240deg 3.7% 15.9%);
+  --input: hsl(240deg 3.7% 15.9%);
+  --ring: hsl(346.8deg 77.2% 49.8%);
+}

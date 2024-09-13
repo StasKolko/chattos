@@ -1,0 +1,25 @@
+.light.orange {
+  --card: hsl(0deg 0% 100%);
+  --card-foreground: hsl(20deg 14.3% 4.1%);
+  --active: hsl(24.6deg 83.2% 80.3%);
+  --primary: hsl(24.6deg 95% 53.1%);
+  --primary-foreground: hsl(60deg 9.1% 97.8%);
+  --secondary: hsl(60deg 4.8% 90%);
+  --secondary-foreground: hsl(24deg 9.8% 10%);
+  --border: hsl(20deg 5.9% 88%);
+  --input: hsl(20deg 5.9% 82%);
+  --ring: hsl(24.6deg 95% 53.1%);
+}
+
+.dark.orange {
+  --card: hsl(20deg 14.3% 4.1%);
+  --card-foreground: hsl(60deg 9.1% 97.8%);
+  --active: hsl(20.5deg 91.2% 20%);
+  --primary: hsl(20.5deg 90.2% 48.2%);
+  --primary-foreground: hsl(60deg 9.1% 97.8%);
+  --secondary: hsl(12deg 6.5% 15.1%);
+  --secondary-foreground: hsl(60deg 9.1% 97.8%);
+  --border: hsl(12deg 6.5% 15.1%);
+  --input: hsl(12deg 6.5% 15.1%);
+  --ring: hsl(20.5deg 90.2% 48.2%);
+}

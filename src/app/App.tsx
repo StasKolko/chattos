@@ -1,3 +1,5 @@
+import './styles/index.css';
+
 import {
   createBrowserRouter,
   Outlet,

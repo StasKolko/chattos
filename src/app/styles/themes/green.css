@@ -1,0 +1,25 @@
+.light.green {
+  --card: hsl(0deg 0% 100%);
+  --card-foreground: hsl(240deg 10% 3.9%);
+  --active: hsl(142deg 83.2% 73.3%);
+  --primary: hsl(142.1deg 76.2% 36.3%);
+  --primary-foreground: hsl(355.7deg 100% 97.3%);
+  --secondary: hsl(240deg 4.8% 90.9%);
+  --secondary-foreground: hsl(240deg 5.9% 10%);
+  --border: hsl(240deg 5.9% 88%);
+  --input: hsl(240deg 5.9% 82%);
+  --ring: hsl(142.1deg 76.2% 36.3%);
+}
+
+.dark.green {
+  --card: hsl(24deg 9.8% 10%);
+  --card-foreground: hsl(0deg 0% 95%);
+  --active: hsl(142.1deg 91.2% 20%);
+  --primary: hsl(142.1deg 70.6% 45.3%);
+  --primary-foreground: hsl(144.9deg 80.4% 10%);
+  --secondary: hsl(240deg 3.7% 15.9%);
+  --secondary-foreground: hsl(0deg 0% 98%);
+  --border: hsl(240deg 3.7% 15.9%);
+  --input: hsl(240deg 3.7% 15.9%);
+  --ring: hsl(142.4deg 71.8% 29.2%);
+}

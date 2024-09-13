@@ -1,0 +1,13 @@
+.text-xs { font: var(--text-xs);}
+.text-sm { font: var(--text-sm);}
+.text-base {font: var(--text-base);}
+.text-lg { font: var(--text-lg);}
+.text-xl { font: var(--text-xl);}
+.text-2xl { font: var(--text-2xl);}
+.text-3xl { font: var(--text-3xl);}
+.text-4xl { font: var(--text-4xl);}
+.text-5xl { font: var(--text-5xl);}
+.text-6xl { font: var(--text-6xl);}
+.text-7xl { font: var(--text-7xl);}
+.text-8xl { font: var(--text-8xl);}
+.text-9xl { font: var(--text-9xl);}
