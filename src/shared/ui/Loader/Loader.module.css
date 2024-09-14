@@ -1,0 +1,54 @@
+.loader {
+  --loader-size: 3rem;
+  --first-circle-color: var(--foreground);
+  --second-circle-color: var(--primary);
+
+  display: block;
+  width: var(--loader-size);
+  height: var(--loader-size);
+  border-radius: 50%;
+  position: relative;
+  animation: rotate-loader 1s linear infinite;
+}
+
+.loader::before,
+.loader::after {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: 5px solid var(--first-circle-color);
+  animation: prix-clip-fix 2s linear infinite;
+}
+
+.loader::after {
+  inset: 8px;
+  transform: rotate3d(90, 90, 0, 180deg);
+  border-color: var(--second-circle-color);
+}
+
+@keyframes rotate-loader {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes prix-clip-fix {
+  0% {
+    clip-path: polygon(50% 50%, 0 0, 0 0, 0 0, 0 0, 0 0);
+  }
+
+  50% {
+    clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 0, 100% 0, 100% 0);
+  }
+
+  75%,
+  100% {
+    clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 100% 100%, 100% 100%);
+  }
+}
