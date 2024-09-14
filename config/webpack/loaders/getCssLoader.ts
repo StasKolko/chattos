@@ -12,6 +12,7 @@ export function getCssLoader(isDev: boolean): RuleSetRule {
       {
         loader: "css-loader",
         options: {
+          import: true,
           esModule: true,
           modules: {
             auto: true,

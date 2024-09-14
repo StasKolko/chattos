@@ -1,4 +1,4 @@
-export { type UseTheme } from './types';
+export { type UseThemeProps } from './types';
 export { themeColors } from './constants';
 export {
   ThemeContext,
