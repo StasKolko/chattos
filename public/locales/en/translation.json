@@ -2,5 +2,9 @@
   "язык": "en",
   "Язык сайта": "Site language",
   "Главная": "Home",
-  "О нас": "About us"
+  "О нас": "About us",
+  "Цвет темы сайта": "Site theme color",
+  "Светлый или темный режим": "Light or dark mode",
+  "Страница не найдена": "404: Not Found Page",
+  "Вызвать ошибку": "Raise an error"
 }

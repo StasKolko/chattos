@@ -1,3 +1,5 @@
+"use client"
+
 import { cn } from '@/shared/lib/classNames';
 import { navigation } from './AppNav.module.css';
 
@@ -30,7 +32,7 @@ export const AppNav = ({ className }: AppNavProps) => {
   const currentPage = pathname === '/' ? 'home' : pathname.split('/')[1];
 
   return (
-    <ul className={cn(navigation, className)}>
+    <ul data-testid="appNav" className={cn(navigation, className)}>
       {appNavPaths.map(({ path, title, page }) => (
         <li key={path}>
           <Button
