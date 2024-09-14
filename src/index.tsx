@@ -11,6 +11,7 @@ import {
   RouterProvider
 } from 'react-router-dom';
 import { themeColors } from '@/shared/lib/theme';
+import { ErrorBoundary } from '@/app/providers/ErrorBoundary';
 
 let domNode = document.getElementById('root');
 
@@ -27,7 +28,9 @@ const AppRouter = createBrowserRouter(appRoutes);
 root.render(
   <StrictMode>
     <ThemeProvider disableTransitionOnChange themeColors={themeColors}>
-      <RouterProvider router={AppRouter} />
+      <ErrorBoundary>
+        <RouterProvider router={AppRouter} />
+      </ErrorBoundary>
     </ThemeProvider>
   </StrictMode>
 );

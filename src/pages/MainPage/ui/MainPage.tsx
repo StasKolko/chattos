@@ -1,4 +1,4 @@
-// import { ErrorButton } from '@/features/ErrorButton';
+import { ErrorButton } from '@/features/ErrorButton';
 import { useTranslation } from 'react-i18next';
 
 export default function MainPage() {
@@ -7,7 +7,7 @@ export default function MainPage() {
   return (
     <div>
       {t('Главная')}
-      {/* <ErrorButton /> */}
+      <ErrorButton />
     </div>
   );
 }
