@@ -7,7 +7,7 @@ type ReloadButtonProps = {
 }
 
 export const ReloadButton = ({ className }: ReloadButtonProps) => {
-  const { t } = useTranslation();
+  const { t } = useTranslation('error-page');
   const reloadToggle = () => {
     // eslint-disable-next-line no-restricted-globals
     location.reload();

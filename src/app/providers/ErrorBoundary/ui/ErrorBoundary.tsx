@@ -4,7 +4,7 @@ import { PageLoader } from '@/features/PageLoader';
 import { ErrorPage } from '@/pages/ErrorPage';
 
 interface ErrorBoundaryProps {
-  children: ReactNode;
+  children?: ReactNode;
 }
 
 interface ErrorBoundaryState {

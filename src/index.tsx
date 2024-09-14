@@ -2,16 +2,13 @@ import '@/app/styles/index.css';
 import '@/shared/config/i18n/i18n';
 
 import { createRoot } from 'react-dom/client';
-import { StrictMode } from 'react';
 
-import { ThemeProvider } from '@/app/providers/ThemeProvider';
 import { appRoutes } from '@/app/routes';
 import {
   createBrowserRouter,
   RouterProvider
 } from 'react-router-dom';
-import { themeColors } from '@/shared/lib/theme';
-import { ErrorBoundary } from '@/app/providers/ErrorBoundary';
+import { AppProvider } from './app/providers/AppProvider/ui/AppProvider';
 
 let domNode = document.getElementById('root');
 
@@ -26,11 +23,7 @@ const root = createRoot(domNode);
 const AppRouter = createBrowserRouter(appRoutes);
 
 root.render(
-  <StrictMode>
-    <ThemeProvider disableTransitionOnChange themeColors={themeColors}>
-      <ErrorBoundary>
-        <RouterProvider router={AppRouter} />
-      </ErrorBoundary>
-    </ThemeProvider>
-  </StrictMode>
+  <AppProvider>
+    <RouterProvider router={AppRouter} />
+  </AppProvider>
 );
