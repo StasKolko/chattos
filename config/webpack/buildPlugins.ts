@@ -9,6 +9,7 @@ import { WebpackOptions } from './types/config';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import ReactRefreshWebpackPlugin from '@pmmmwh/react-refresh-webpack-plugin';
+import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer';
 
 export function buildPlugins(options: WebpackOptions) {
   const { isDev, paths } = options;
@@ -23,6 +24,9 @@ export function buildPlugins(options: WebpackOptions) {
     }),
     new DefinePlugin({
       __IS_DEV__: JSON.stringify(isDev)
+    }),
+    new BundleAnalyzerPlugin({
+      openAnalyzer: false,
     })
   ];
 
