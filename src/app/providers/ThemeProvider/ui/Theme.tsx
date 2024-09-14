@@ -145,6 +145,7 @@ export const Theme = ({
     ]);
 
   return (
+    // eslint-disable-next-line
     // @ts-ignore
     <ThemeContext.Provider value={providerValue}>
       <ThemeScript

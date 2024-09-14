@@ -1,16 +1,16 @@
-import { RuleSetRule } from "webpack";
+import { RuleSetRule } from 'webpack';
 
-import MiniCssExtractPlugin from "mini-css-extract-plugin";
+import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 
 export function getCssLoader(isDev: boolean): RuleSetRule {
   return {
     test: /\.css$/i,
     use: [
       isDev
-        ? "style-loader"
+        ? 'style-loader'
         : MiniCssExtractPlugin.loader,
       {
-        loader: "css-loader",
+        loader: 'css-loader',
         options: {
           import: true,
           esModule: true,
@@ -24,5 +24,5 @@ export function getCssLoader(isDev: boolean): RuleSetRule {
         }
       }
     ],
-  }
+  };
 }

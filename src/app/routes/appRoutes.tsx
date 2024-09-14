@@ -1,16 +1,19 @@
 import {
   RouteObject,
   useRouteError
-} from "react-router-dom"
+} from 'react-router-dom';
 
-import { NotFoundPage } from "@/pages/NotFoundPage";
-import { Suspense } from "react";
-import { App } from "../App";
+import { NotFoundPage } from '@/pages/NotFoundPage';
+import { Suspense } from 'react';
+import { App } from '../App';
+import { AboutPage } from '@/pages/AboutPage';
+import MainPage from '@/pages/MainPage/ui/MainPage';
 
 function ErrorBoundary() {
-  let error = useRouteError();
+  const error = useRouteError();
   console.error(error);
   // Uncaught ReferenceError: path is not defined
+  // eslint-disable-next-line
   return <div>Dang! </div>;
 }
 
@@ -22,24 +25,31 @@ export const appRoutes: RouteObject[] = [
     children: [
       {
         index: true,
-        async lazy() {
-          let { MainPage } = await import("../../pages/MainPage/ui/MainPage");
-          return { Component: MainPage };
-        },
+        element: (
+          // eslint-disable-next-line
+          <Suspense fallback={<div>Loading</div>}>
+            <MainPage />
+          </Suspense>
+        ),
       },
       {
         path: '/about',
-        async lazy() {
-          let { AboutPage } = await import("../../pages/AboutPage/ui/AboutPage");
-          return { Component: AboutPage };
-        },
+        element: (
+          // eslint-disable-next-line
+          <Suspense fallback={<div>Loading</div>}>
+            <AboutPage />
+          </Suspense>
+        )
       },
       {
-        path: "/*",
-        element: (<Suspense fallback={<div>Loading</div>}>
-          <NotFoundPage />
-        </Suspense>),
+        path: '/*',
+        element: (
+          // eslint-disable-next-line
+          <Suspense fallback={<div>Loading</div>}>
+            <NotFoundPage />
+          </Suspense>
+        ),
       }
     ]
   }
-]
+];

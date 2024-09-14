@@ -1,4 +1,4 @@
-import { classNames as cn } from "./classNames"
+import { classNames as cn } from './classNames';
 
 describe('classNames', () => {
   it.each([
@@ -7,8 +7,8 @@ describe('classNames', () => {
   ])('should return empty string', ({ classes, result }) => {
     const expected = cn(...classes);
 
-    expect(expected).toBe(result)
-  })
+    expect(expected).toBe(result);
+  });
 
   it.each([
     { classes: ['red', '', ' '], result: 'red' },
@@ -17,6 +17,6 @@ describe('classNames', () => {
   ])('should return string', ({ classes, result }) => {
     const expected = cn(...classes);
 
-    expect(expected).toBe(result)
-  })
-})
+    expect(expected).toBe(result);
+  });
+});

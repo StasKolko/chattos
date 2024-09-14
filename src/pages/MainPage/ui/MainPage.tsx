@@ -1,9 +1,13 @@
-export const MainPage = () => {
+// import { ErrorButton } from '@/features/ErrorButton';
+import { useTranslation } from 'react-i18next';
+
+export default function MainPage() {
+  const { t } = useTranslation();
+
   return (
     <div>
-      MainPage
+      {t('Главная')}
+      {/* <ErrorButton /> */}
     </div>
   );
-};
-
-//  default MainPage;
+}

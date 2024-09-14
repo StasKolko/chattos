@@ -1,11 +1,11 @@
-import { RuleSetRule } from "webpack";
+import { RuleSetRule } from 'webpack';
 
 export function getBabelLoader(isDev: boolean): RuleSetRule {
   return {
     test: /\.(js|ts|tsx)$/,
     exclude: /node_modules/,
     use: {
-      loader: "babel-loader",
+      loader: 'babel-loader',
       options: {
         presets: [
           ['@babel/preset-env',
@@ -15,19 +15,19 @@ export function getBabelLoader(isDev: boolean): RuleSetRule {
           ],
           '@babel/preset-typescript',
           [
-            "@babel/preset-react",
+            '@babel/preset-react',
             {
-              "runtime": "automatic"
+              'runtime': 'automatic'
             }
           ]
         ],
         plugins: [
           isDev
-          && "babel-plugin-jsx-remove-data-test-id",
+          && 'babel-plugin-jsx-remove-data-test-id',
           isDev
           && 'react-refresh/babel'
         ].filter(Boolean)
       }
     }
-  }
+  };
 }

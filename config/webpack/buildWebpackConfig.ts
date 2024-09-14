@@ -1,12 +1,12 @@
-import { Configuration } from "webpack";
-import { WebpackOptions } from "./types/config";
+import { Configuration } from 'webpack';
+import { WebpackOptions } from './types/config';
 
-import { buildPlugins } from "./buildPlugins";
-import { buildResolves } from "./buildResolves";
-import { buildLoaders } from "./buildLoaders";
-import { buildDevServer } from "./buildDevServer";
+import { buildPlugins } from './buildPlugins';
+import { buildResolves } from './buildResolves';
+import { buildLoaders } from './buildLoaders';
+import { buildDevServer } from './buildDevServer';
 
-import CssMinimizerPlugin from 'css-minimizer-webpack-plugin'
+import CssMinimizerPlugin from 'css-minimizer-webpack-plugin';
 
 export function buildWebpackConfig(options: WebpackOptions) {
   const { isDev, mode, paths, port } = options;
@@ -29,7 +29,7 @@ export function buildWebpackConfig(options: WebpackOptions) {
     optimization: {
       minimize: true,
       minimizer: [
-        `...`,
+        '...',
         new CssMinimizerPlugin()
       ]
     },
@@ -39,7 +39,7 @@ export function buildWebpackConfig(options: WebpackOptions) {
     devServer: isDev
       ? buildDevServer(port)
       : undefined,
-  }
+  };
 
   return config;
 }

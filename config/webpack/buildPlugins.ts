@@ -3,11 +3,11 @@ import {
   HotModuleReplacementPlugin,
   ProgressPlugin,
   WebpackPluginInstance
-} from "webpack";
-import { WebpackOptions } from "./types/config";
+} from 'webpack';
+import { WebpackOptions } from './types/config';
 
 import HtmlWebpackPlugin from 'html-webpack-plugin';
-import MiniCssExtractPlugin from "mini-css-extract-plugin";
+import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import ReactRefreshWebpackPlugin from '@pmmmwh/react-refresh-webpack-plugin';
 
 export function buildPlugins(options: WebpackOptions) {
@@ -24,14 +24,14 @@ export function buildPlugins(options: WebpackOptions) {
     new DefinePlugin({
       __IS_DEV__: JSON.stringify(isDev)
     })
-  ]
+  ];
 
   if (isDev) {
     plugins.push(
       new ProgressPlugin(),
       new HotModuleReplacementPlugin(),
       new ReactRefreshWebpackPlugin()
-    )
+    );
   }
 
   return plugins;

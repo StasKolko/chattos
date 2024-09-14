@@ -22,7 +22,7 @@ if (!domNode) {
 
 const root = createRoot(domNode);
 
-const AppRouter = createBrowserRouter(appRoutes)
+const AppRouter = createBrowserRouter(appRoutes);
 
 root.render(
   <StrictMode>

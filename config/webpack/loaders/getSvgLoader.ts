@@ -1,4 +1,4 @@
-import { RuleSetRule } from "webpack";
+import { RuleSetRule } from 'webpack';
 
 export function getSvgLoader(): RuleSetRule {
   return {

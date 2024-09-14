@@ -1,4 +1,4 @@
-"use client"
+'use client';
 
 import { cn } from '@/shared/lib/classNames';
 import { navigation } from './AppNav.module.css';

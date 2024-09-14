@@ -6,6 +6,7 @@ import { Header } from '@/widgets/Header';
 export const App = () => {
   return (
     <>
+      {/* eslint-disable-next-line */}
       <Suspense fallback={<div>Loading</div>}>
         <Header />
         <Outlet />

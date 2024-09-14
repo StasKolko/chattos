@@ -1,5 +1,5 @@
-import { ResolveOptions } from "webpack";
-import { WebpackPaths } from "./types/config";
+import { ResolveOptions } from 'webpack';
+import { WebpackPaths } from './types/config';
 
 export function buildResolves(paths: WebpackPaths) {
   const resolves: ResolveOptions = {
@@ -9,7 +9,7 @@ export function buildResolves(paths: WebpackPaths) {
     alias: {
       '@': paths.src
     }
-  }
+  };
 
   return resolves;
 }

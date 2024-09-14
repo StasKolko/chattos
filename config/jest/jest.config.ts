@@ -7,31 +7,31 @@ import type { Config } from 'jest';
 
 const config: Config = {
   clearMocks: true,
-  testEnvironment: "jsdom",
+  testEnvironment: 'jsdom',
   coveragePathIgnorePatterns: [
     '\\\\node_modules\\\\',
   ],
   moduleFileExtensions: [
-    "js",
-    "mjs",
-    "cjs",
-    "jsx",
-    "ts",
-    "tsx",
-    "json",
-    "node"
+    'js',
+    'mjs',
+    'cjs',
+    'jsx',
+    'ts',
+    'tsx',
+    'json',
+    'node'
   ],
   moduleDirectories: ['node_modules', '<rootDir>src'],
   modulePaths: [
     '<rootDir>src',
   ],
   testMatch: [
-    "<rootDir>src/**/*.(spec|test).[jt]s?(x)"
+    '<rootDir>src/**/*.(spec|test).[jt]s?(x)'
   ],
   rootDir: '../../',
   setupFilesAfterEnv: ['<rootDir>config/jest/jest-setup.js'],
   moduleNameMapper: {
-    "^@/(.*)$": "<rootDir>/src/$1",
+    '^@/(.*)$': '<rootDir>/src/$1',
     '\\.css$': 'identity-obj-proxy',
   },
   globals: {

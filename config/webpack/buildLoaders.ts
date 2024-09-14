@@ -1,9 +1,9 @@
-import { RuleSetRule } from "webpack";
+import { RuleSetRule } from 'webpack';
 
-import { getBabelLoader } from "./loaders/getBabelLoader";
-import { getCssLoader } from "./loaders/getCssLoader";
-import { getFileLoader } from "./loaders/getFileLoader";
-import { getSvgLoader } from "./loaders/getSvgLoader";
+import { getBabelLoader } from './loaders/getBabelLoader';
+import { getCssLoader } from './loaders/getCssLoader';
+import { getFileLoader } from './loaders/getFileLoader';
+import { getSvgLoader } from './loaders/getSvgLoader';
 
 export function buildLoaders(isDev: boolean) {
   const babelLoader = getBabelLoader(isDev);
@@ -16,7 +16,7 @@ export function buildLoaders(isDev: boolean) {
     fileLoader,
     babelLoader,
     cssLoader
-  ]
+  ];
 
   return loaders;
 }
