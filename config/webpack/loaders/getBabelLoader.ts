@@ -23,8 +23,9 @@ export function getBabelLoader(isDev: boolean): RuleSetRule {
         ],
         plugins: [
           isDev
-            ? undefined
-            : "babel-plugin-jsx-remove-data-test-id"
+          && "babel-plugin-jsx-remove-data-test-id",
+          isDev
+          && 'react-refresh/babel'
         ].filter(Boolean)
       }
     }

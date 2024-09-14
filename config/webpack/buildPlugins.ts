@@ -8,6 +8,7 @@ import { WebpackOptions } from "./types/config";
 
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import MiniCssExtractPlugin from "mini-css-extract-plugin";
+import ReactRefreshWebpackPlugin from '@pmmmwh/react-refresh-webpack-plugin';
 
 export function buildPlugins(options: WebpackOptions) {
   const { isDev, paths } = options;
@@ -28,7 +29,8 @@ export function buildPlugins(options: WebpackOptions) {
   if (isDev) {
     plugins.push(
       new ProgressPlugin(),
-      new HotModuleReplacementPlugin()
+      new HotModuleReplacementPlugin(),
+      new ReactRefreshWebpackPlugin()
     )
   }
 
