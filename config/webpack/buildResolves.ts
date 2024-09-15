@@ -1,13 +1,12 @@
 import { ResolveOptions } from 'webpack';
-import { WebpackPaths } from './types/config';
 
-export function buildResolves(paths: WebpackPaths) {
+export function buildResolves(path: string) {
   const resolves: ResolveOptions = {
     extensions: ['.tsx', '.ts', '.js'],
     preferAbsolute: true,
     mainFiles: ['index'],
     alias: {
-      '@': paths.src
+      '@': path,
     }
   };
 

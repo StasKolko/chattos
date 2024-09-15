@@ -25,7 +25,7 @@ export function buildWebpackConfig(options: WebpackOptions) {
     module: {
       rules: buildLoaders(isDev),
     },
-    resolve: buildResolves(paths),
+    resolve: buildResolves(paths.src),
     optimization: {
       minimize: true,
       minimizer: [
