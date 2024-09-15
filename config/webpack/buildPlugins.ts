@@ -25,16 +25,16 @@ export function buildPlugins(options: WebpackOptions) {
     new DefinePlugin({
       __IS_DEV__: JSON.stringify(isDev)
     }),
-    new BundleAnalyzerPlugin({
-      openAnalyzer: false,
-    })
   ];
 
   if (isDev) {
     plugins.push(
       new ProgressPlugin(),
       new HotModuleReplacementPlugin(),
-      new ReactRefreshWebpackPlugin()
+      new ReactRefreshWebpackPlugin(),
+      new BundleAnalyzerPlugin({
+        openAnalyzer: false,
+      })
     );
   }
 
