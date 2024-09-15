@@ -69,4 +69,5 @@ module.exports = {
     'i18next/no-literal-string': 2,
     'max-len': ['error', { code: 120 }],
   },
+  "ignorePatterns": ["node_modules", "dist", "storybook-static"],
 };
