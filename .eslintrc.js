@@ -53,7 +53,7 @@ module.exports = {
     ],
     'linebreak-style': [
       'error',
-      'windows'
+      'unix'
     ],
     'quotes': [
       'error',
@@ -69,5 +69,5 @@ module.exports = {
     'i18next/no-literal-string': 2,
     'max-len': ['error', { code: 120 }],
   },
-  "ignorePatterns": ["node_modules", "dist", "storybook-static"],
+  'ignorePatterns': ['node_modules', 'dist', 'storybook-static'],
 };
