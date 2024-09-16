@@ -21,6 +21,7 @@ export const LangSwitcher = ({ size, variant }:
 
   return (
     <Button
+      dataTestId='lang-switcher'
       className={text}
       variant={variant}
       size={size}

@@ -7,11 +7,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { Button } from '@/shared/ui/Button';
 import { useTranslation } from 'react-i18next';
 
-type AppNavProps = {
-  className?: string;
-}
-
-const appNavPaths = [
+export const appNavPaths = [
   {
     path: '/',
     title: 'Главная',
@@ -24,27 +20,25 @@ const appNavPaths = [
   },
 ];
 
-export const AppNav = ({ className }: AppNavProps) => {
+export const AppNav = ({ className }: { className?: string }) => {
   const { t } = useTranslation();
 
-  const location = useLocation();
-  const pathname = location.pathname;
+  const { pathname } = useLocation();
+
   const currentPage = pathname === '/' ? 'home' : pathname.split('/')[1];
 
   return (
-    <ul data-testid="appNav" className={cn(navigation, className)}>
+    <ul data-testid="app-nav" className={cn(navigation, className)}>
       {appNavPaths.map(({ path, title, page }) => (
         <li key={path}>
           <Button
             asChild
             option='link'
-            variant={
-              (currentPage === page)
-                ? 'primary'
-                : 'secondary'
+            variant={currentPage === page ? 'primary' : 'secondary'
             }
             size='md'
-            underline>
+            underline
+          >
             <Link to={path}>{t(title)}</Link>
           </Button>
         </li>

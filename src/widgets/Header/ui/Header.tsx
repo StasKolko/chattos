@@ -17,15 +17,15 @@ export const Header = () => {
   const variant = 'outline';
 
   return (
-    <header className={header}>
-      <div className={container}>
-        <nav className={navigation}>
-          <HamburgerMenuIcon />
+    <header data-testid='header' className={header}>
+      <div data-testid='header__container' className={container}>
+        <nav data-testid='header__navigation' className={navigation}>
+          <HamburgerMenuIcon data-testid='hamburger-menu-icon' />
 
           <AppNav className={links} />
         </nav>
 
-        <div className={actions}>
+        <div data-testid='header__actions' className={actions}>
           <ThemeColorSwitcher
             variant={variant}
             size={size} />

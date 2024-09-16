@@ -24,6 +24,7 @@ export const ThemeColorSwitcher = ({ size, variant }:
 
   return (
     <Button
+      dataTestId='theme-color-switcher'
       variant={variant}
       size={size}
       option="icon"

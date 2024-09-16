@@ -21,6 +21,7 @@ export const ThemeModeSwitcher = ({ size, variant }:
 
   return (
     <Button
+      dataTestId='theme-mode-switcher'
       variant={variant}
       size={size}
       option="icon"
