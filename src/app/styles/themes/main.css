@@ -1,7 +1,7 @@
 .light {
   --background: hsl(0deg 0% 100%);
   --foreground: hsl(222deg 100% 4%);
-  --overlay: rgb(0 0 0 / 40%);
+  --overlay: rgba(0 0 0 / 40%);
   --destructive: hsl(0deg 99% 94%);
   --destructive-foreground: hsl(0deg 99% 25%);
   --successful: hsl(145deg 99% 94%);

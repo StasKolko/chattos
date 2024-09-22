@@ -7,5 +7,7 @@
   "Светлый или темный режим": "Light or dark mode",
   "Страница не найдена": "404: Not Found Page",
   "Вызвать ошибку": "Raise an error",
-  "кнопка": "button"
+  "кнопка": "button",
+  "открыть": "open",
+  "закрыть": "close"
 }

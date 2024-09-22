@@ -1,0 +1,161 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 3;
+  animation: overlayOpen 500ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.overlay.open {
+  background-color: var(--overlay);
+}
+
+.close-overlay {
+  animation: overlayClose 500ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.content {
+  position: fixed;
+  background-color: var(--card);
+}
+
+.p-xs {
+  padding: 8px;
+}
+
+.p-sm {
+  padding: 16px;
+}
+
+.p-md {
+  padding: 24px;
+}
+
+.p-lg {
+  padding: 32px;
+}
+
+.center {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90vw;
+  max-width: 450px;
+  max-height: 85vh;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  animation: contentCenterOpen 350ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.center.close {
+  animation: contentCenterClose 350ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.left {
+  width: min(60vw, 300px);
+  left: 0;
+  top: 0;
+  bottom: 0;
+  border-right: 1px solid var(--border);
+  animation: contentLeftOpen 500ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.left.close {
+  animation: contentLeftClose 500ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.right {
+  width: min(60vw, 300px);
+  right: 0;
+  top: 0;
+  bottom: 0;
+  border-left: 1px solid var(--border);
+  animation: contentRightOpen 500ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.right.close {
+  animation: contentRightClose 500ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes overlayOpen {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes overlayClose {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes contentCenterOpen {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -40%) scale(0.70);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+@keyframes contentCenterClose {
+  from {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  to {
+    opacity: 0;
+    transform: translate(-50%, -40%) scale(0.70);
+  }
+}
+
+@keyframes contentLeftOpen {
+  from {
+    transform: translateX(-100%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes contentLeftClose {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes contentRightOpen {
+  from {
+    transform: translateX(100%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes contentRightClose {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(100%);
+  }
+}
