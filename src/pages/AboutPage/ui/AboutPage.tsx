@@ -4,6 +4,8 @@ export default function AboutPage() {
   const { t } = useTranslation();
 
   return (
-    <div>{t('О нас')}</div>
+    <div>
+      {t('О нас')}
+    </div>
   );
 }

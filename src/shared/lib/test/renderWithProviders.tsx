@@ -4,15 +4,26 @@ import { I18nextProvider } from 'react-i18next';
 
 import i18n from '@/shared/config/i18n/i18nForStorybook';
 import { MemoryRouter } from 'react-router-dom';
+import { StateSchema, StoreProvider } from '@/app/providers/StoreProvider';
 
-export const renderWithProviders = (children: ReactNode) => {
+export const renderWithProviders = ({
+  children,
+  initialState,
+  initialEntries = ['/', '/about'],
+}: {
+  children: ReactNode;
+  initialState?: StateSchema;
+  initialEntries?: string[];
+}) => {
   return (
     render(
-      <I18nextProvider i18n={i18n}>
-        <MemoryRouter initialEntries={['/', '/about']}>
-          {children}
-        </MemoryRouter>
-      </I18nextProvider>
+      <StoreProvider initialState={initialState}>
+        <I18nextProvider i18n={i18n}>
+          <MemoryRouter initialEntries={initialEntries}>
+            {children}
+          </MemoryRouter>
+        </I18nextProvider>
+      </StoreProvider>
     )
   );
 };
