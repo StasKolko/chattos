@@ -5,7 +5,7 @@ import { screen } from '@testing-library/react';
 describe('AppNav', () => {
   it('should render navigation links based on predefined paths', () => {
     renderWithProviders(
-      <AppNav />
+      { children: <AppNav /> }
     );
 
     const nav = screen.getByTestId('app-nav');

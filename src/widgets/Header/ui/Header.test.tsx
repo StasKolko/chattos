@@ -3,7 +3,7 @@ import { renderWithProviders } from '@/shared/lib/test';
 
 describe('Header', () => {
   it('should render the header component with all elements', () => {
-    const { getByTestId } = renderWithProviders(<Header />);
+    const { getByTestId } = renderWithProviders({ children: <Header /> });
 
     expect(getByTestId('header')).toBeInTheDocument();
     expect(getByTestId('header__container')).toBeInTheDocument();
@@ -17,7 +17,7 @@ describe('Header', () => {
   });
 
   it('should render correctly without children', () => {
-    const { container } = renderWithProviders(<Header />);
+    const { container } = renderWithProviders({ children: <Header /> });
 
     expect(container.firstChild).toMatchSnapshot();
   });
